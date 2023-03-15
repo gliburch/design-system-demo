@@ -6,8 +6,8 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
-import StyledCheckbox from '@/components/design-system/src/styled-radio/vue2/StyledCheckbox.vue'
-import StyledRadio from '@/components/design-system/src/styled-radio/vue2/StyledRadio.vue'
+import StyledCheckbox from '@/components/integration-design-system/src/styled-radio/vue2/StyledCheckbox.vue'
+import StyledRadio from '@/components/integration-design-system/src/styled-radio/vue2/StyledRadio.vue'
 const checkbox = ref({
   foo: false,
   bar: true
