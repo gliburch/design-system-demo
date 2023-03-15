@@ -1,15 +1,53 @@
 <script setup>
+import { ref } from 'vue'
 import WelcomeItem from './WelcomeItem.vue'
 import DocumentationIcon from './icons/IconDocumentation.vue'
 import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
+import StyledCheckbox from '@/components/design-system/src/styled-radio/vue2/StyledCheckbox.vue'
+import StyledRadio from '@/components/design-system/src/styled-radio/vue2/StyledRadio.vue'
+const checkbox = ref({
+  foo: false,
+  bar: true
+})
+const radio = ref('foo')
 </script>
 
 <template>
   <div>
-    <WelcomeItem>
+    <h2>Styled Checkbox</h2>
+    <ul>
+    <li>
+      <label>
+        <StyledCheckbox v-model="checkbox.foo"/>
+        foo
+      </label>
+    </li>
+    <li>
+      <label>
+        <StyledCheckbox v-model="checkbox.bar"/>
+        bar
+      </label>
+    </li>
+    </ul>
+    <h2>Styled Radio</h2>
+    <ul>
+    <li>
+      <label>
+        <StyledRadio v-model="radio" name="radio" val="foo" />
+        foo
+      </label>
+    </li>
+    <li>
+      <label>
+        <StyledRadio v-model="radio" name="radio" val="bar" />
+        bar
+      </label>
+    </li>
+    </ul>
+    <!-- <WelcomeItem>
       <template #icon>
         <DocumentationIcon />
       </template>
@@ -81,6 +119,6 @@ import SupportIcon from './icons/IconSupport.vue'
       As an independent project, Vue relies on community backing for its sustainability. You can
       help us by
       <a target="_blank" href="https://vuejs.org/sponsor/">becoming a sponsor</a>.
-    </WelcomeItem>
+    </WelcomeItem> -->
   </div>
 </template>
