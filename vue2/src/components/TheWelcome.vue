@@ -6,8 +6,10 @@ import ToolingIcon from './icons/IconTooling.vue'
 import EcosystemIcon from './icons/IconEcosystem.vue'
 import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
-import StyledCheckbox from '@/components/integration-design-system/src/styled-radio/vue2/StyledCheckbox.vue'
-import StyledRadio from '@/components/integration-design-system/src/styled-radio/vue2/StyledRadio.vue'
+import StyledCheckbox from '@/components/integration-design-system/src/components/styled-checkbox/StyledCheckbox.vue2.vue3.vue'
+import StyledRadio from '@/components/integration-design-system/src/components/styled-radio/StyledRadio.vue2.vue3.vue'
+import StyledButton from '@/components/integration-design-system/src/components/styled-button/StyledButton.vue2.vue'
+import StyledBadge from '@/components/integration-design-system/src/components/styled-badge/StyledBadge.vue2.vue'
 const checkbox = ref({
   foo: false,
   bar: true
@@ -47,6 +49,35 @@ const radio = ref('foo')
       </label>
     </li>
     </ul>
+    <h2>Styled Radio</h2>
+    <div>
+      <StyledButton>버튼</StyledButton>
+      &nbsp;
+      <StyledButton size="large">버튼</StyledButton>
+      &nbsp;
+      <StyledButton size="x-large">버튼</StyledButton>
+    </div>
+    <div>
+      <StyledButton :width="100">버튼</StyledButton>
+      &nbsp;
+      <StyledButton outlined :width="100" size="large">버튼</StyledButton>
+      &nbsp;
+      <StyledButton :width="100" color="secondary" size="x-large">버튼</StyledButton>
+      &nbsp;
+      <StyledButton loading :width="100" color="grey" size="x-large">버튼</StyledButton>
+    </div>
+    <h2>Styled Badge</h2>
+    <div>
+      <StyledBadge>NEW</StyledBadge>
+      &nbsp;
+      <StyledBadge color="red" size="large">NEW</StyledBadge>
+      &nbsp;
+      <StyledBadge shape="outlined" size="x-large">NEW</StyledBadge>
+      &nbsp;
+      <StyledBadge color="var(--blue-500)" shape="embossed" size="x-large">NEW</StyledBadge>
+      &nbsp;
+      <StyledBadge rounded shape="engraved" size="x-large">NEW</StyledBadge>
+    </div>
     <!-- <WelcomeItem>
       <template #icon>
         <DocumentationIcon />
