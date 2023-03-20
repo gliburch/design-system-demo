@@ -6,8 +6,8 @@ import ToolingIcon from "./icons/IconTooling.vue";
 import EcosystemIcon from "./icons/IconEcosystem.vue";
 import CommunityIcon from "./icons/IconCommunity.vue";
 import SupportIcon from "./icons/IconSupport.vue";
-import StyledCheckbox from "@/components/integration-design-system/src/components/styled-checkbox/StyledCheckbox.vue";
-import StyledRadio from "@/components/integration-design-system/src/components/styled-radio/StyledRadio.vue";
+import StyledCheckbox from "@/components/integration-design-system/src/components/styled-checkbox/StyledCheckbox.vue2.vue3.vue";
+import StyledRadio from "@/components/integration-design-system/src/components/styled-radio/StyledRadio.vue2.vue3.vue";
 
 export default {
   components:{
