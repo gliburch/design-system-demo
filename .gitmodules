@@ -1,3 +1,6 @@
 [submodule "vue2/src/components/integration-design-system"]
 	path = vue2/src/components/integration-design-system
 	url = git@bitbucket.org:medistream-team/integration-design-system.git
+[submodule "vue3/src/components/integration-design-system"]
+	path = vue3/src/components/integration-design-system
+	url = git@bitbucket.org:medistream-team/integration-design-system.git

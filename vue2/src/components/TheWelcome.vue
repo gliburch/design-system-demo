@@ -36,6 +36,7 @@ const radio = ref('foo')
     </ul>
     <h2>Styled Radio</h2>
     <ul>
+      {{ radio }}
     <li>
       <label>
         <StyledRadio v-model="radio" name="radio" val="foo" />
