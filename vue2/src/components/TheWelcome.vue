@@ -49,7 +49,7 @@ const radio = ref('foo')
       </label>
     </li>
     </ul>
-    <h2>Styled Radio</h2>
+    <h2>Styled Button</h2>
     <div>
       <StyledButton>버튼</StyledButton>
       &nbsp;
