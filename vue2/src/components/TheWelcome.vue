@@ -8,8 +8,9 @@ import CommunityIcon from './icons/IconCommunity.vue'
 import SupportIcon from './icons/IconSupport.vue'
 import StyledCheckbox from '@/components/integration-design-system/src/components/styled-checkbox/StyledCheckbox.vue2.vue3.vue'
 import StyledRadio from '@/components/integration-design-system/src/components/styled-radio/StyledRadio.vue2.vue3.vue'
-import StyledButton from '@/components/integration-design-system/src/components/styled-button/StyledButton.vue2.vue'
-import StyledBadge from '@/components/integration-design-system/src/components/styled-badge/StyledBadge.vue2.vue'
+import StyledButton from '@/components/integration-design-system/src/components/styled-button/StyledButton.vue2.vue3.vue'
+import StyledBadge from '@/components/integration-design-system/src/components/styled-badge/StyledBadge.vue2.vue3.vue'
+import StyledTab from '@/components/integration-design-system/src/components/styled-tab/StyledTab.vue2.vue'
 const checkbox = ref({
   foo: false,
   bar: true
@@ -78,6 +79,16 @@ const radio = ref('foo')
       <StyledBadge color="var(--blue-500)" shape="embossed" size="x-large">NEW</StyledBadge>
       &nbsp;
       <StyledBadge rounded shape="engraved" size="x-large">NEW</StyledBadge>
+    </div>
+    <h2>Styled Tab</h2>
+    <div>
+      <StyledTab :items="['탭 1', '탭 2', '탭 3']"></StyledTab>
+    </div>
+    <div>
+      <StyledTab color="red" shape="switch" :items="['탭 1', '탭 2', '탭 3']"></StyledTab>
+    </div>
+    <div>
+      <StyledTab color="var(--blue-500)" shape="pill"  size="x-large" :items="['탭 1', '탭 2', '탭 3']"></StyledTab>
     </div>
     <!-- <WelcomeItem>
       <template #icon>
