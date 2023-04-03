@@ -1,110 +1,96 @@
-<script >
-import { reactive, ref, toRefs } from "vue";
-import WelcomeItem from "./WelcomeItem.vue";
-import DocumentationIcon from "./icons/IconDocumentation.vue";
-import ToolingIcon from "./icons/IconTooling.vue";
-import EcosystemIcon from "./icons/IconEcosystem.vue";
-import CommunityIcon from "./icons/IconCommunity.vue";
-import SupportIcon from "./icons/IconSupport.vue";
-import StyledCheckbox from "@/components/integration-design-system/src/components/styled-checkbox/StyledCheckbox.vue2.vue3.vue";
-import StyledRadio from "@/components/integration-design-system/src/components/styled-radio/StyledRadio.vue2.vue3.vue";
-
-export default {
-  components:{
-    StyledRadio,
-    StyledCheckbox
-  },
-  setup() {
-    const checkbox = reactive({
-      foo: false,
-      bar: true,
-    });
-    const radio = ref('foo');
-    // const radio = ref("foo");
-    const changeParent = (value) => {
-      
-      radio.value = value;
-      console.log(value)
-    };
-
-    return {
-      changeParent,
-      checkbox,
-      radio,
-      ...toRefs(checkbox)
-    };
-  },
-};
+<script setup>
+import { ref } from 'vue'
+import WelcomeItem from './WelcomeItem.vue'
+import DocumentationIcon from './icons/IconDocumentation.vue'
+import ToolingIcon from './icons/IconTooling.vue'
+import EcosystemIcon from './icons/IconEcosystem.vue'
+import CommunityIcon from './icons/IconCommunity.vue'
+import SupportIcon from './icons/IconSupport.vue'
+import StyledCheckbox from '@/components/integration-design-system/src/components/styled-checkbox/StyledCheckbox.vue2.vue3.vue'
+import StyledRadio from '@/components/integration-design-system/src/components/styled-radio/StyledRadio.vue2.vue3.vue'
+import StyledButton from '@/components/integration-design-system/src/components/styled-button/StyledButton.vue2.vue3.vue'
+import StyledBadge from '@/components/integration-design-system/src/components/styled-badge/StyledBadge.vue2.vue3.vue'
+import StyledTab from '@/components/integration-design-system/src/components/styled-tab/StyledTab.vue2.vue3.vue'
+const checkbox = ref({
+  foo: false,
+  bar: true
+})
+const radio = ref('foo')
 </script>
 
 <template>
   <div>
     <h2>Styled Checkbox</h2>
     <ul>
-      <li>
-        <label>
-          <StyledCheckbox v-model="checkbox.foo"
-          :value="foo"
-          />
-          foo
-        </label>
-      </li>
-      <li>
-        <label>
-          <StyledCheckbox v-model="checkbox.bar" :value="bar"/>
-          bar
-        </label>
-      </li>
+    <li>
+      <label>
+        <StyledCheckbox v-model="checkbox.foo"/>
+        foo
+      </label>
+    </li>
+    <li>
+      <label>
+        <StyledCheckbox v-model="checkbox.bar"/>
+        bar
+      </label>
+    </li>
     </ul>
     <h2>Styled Radio</h2>
     <ul>
-      <li>
-        <label>
-          <StyledRadio
-            v-model="radio"
-            :Name="'radio'"
-            :Val="'foo'"
-          />
-          foo
-        </label>
-      </li>
-      <li>
-        <label>
-          <StyledRadio
-            v-model="radio"
-            :Name="'radio'"
-            :Val="'bar'"
-          />
-          bar
-        </label>
-      </li>
-      <!-- <li>
-        <label>
-          <StyledRadio
-           
-            :name="'radio'"
-            :Val="'foo'"
-            :value="'foo'"
-            @input="changeParent"
-          />
-          foo
-        </label>
-      </li>
-      <li>
-        <label>
-          <StyledRadio
-           
-            :name="'radio'"
-            :Val="'bar'"
-            :value="'bar'"
-            @input="changeParent"
-          />
-          bar
-        </label>
-      </li> -->
+      {{ radio }}
+    <li>
+      <label>
+        <StyledRadio v-model="radio" name="radio" val="foo" />
+        foo
+      </label>
+    </li>
+    <li>
+      <label>
+        <StyledRadio v-model="radio" name="radio" val="bar" />
+        bar
+      </label>
+    </li>
     </ul>
-  </div>
-  <!-- <WelcomeItem>
+    <h2>Styled Button</h2>
+    <div>
+      <StyledButton>버튼</StyledButton>
+      &nbsp;
+      <StyledButton size="large">버튼</StyledButton>
+      &nbsp;
+      <StyledButton size="x-large">버튼</StyledButton>
+    </div>
+    <div>
+      <StyledButton :width="100">버튼</StyledButton>
+      &nbsp;
+      <StyledButton outlined :width="100" size="large">버튼</StyledButton>
+      &nbsp;
+      <StyledButton :width="100" color="secondary" size="x-large">버튼</StyledButton>
+      &nbsp;
+      <StyledButton loading :width="100" color="grey" size="x-large">버튼</StyledButton>
+    </div>
+    <h2>Styled Badge</h2>
+    <div>
+      <StyledBadge>NEW</StyledBadge>
+      &nbsp;
+      <StyledBadge color="red" size="large">NEW</StyledBadge>
+      &nbsp;
+      <StyledBadge shape="outlined" size="x-large">NEW</StyledBadge>
+      &nbsp;
+      <StyledBadge color="var(--blue-500)" shape="embossed" size="x-large">NEW</StyledBadge>
+      &nbsp;
+      <StyledBadge rounded shape="engraved" size="x-large">NEW</StyledBadge>
+    </div>
+    <h2>Styled Tab</h2>
+    <div>
+      <StyledTab :items="['탭 1', '탭 2', '탭 3']"></StyledTab>
+    </div>
+    <div>
+      <StyledTab color="red" shape="switch" :items="['탭 1', '탭 2', '탭 3']"></StyledTab>
+    </div>
+    <div>
+      <StyledTab color="var(--blue-500)" shape="pill"  size="x-large" :items="['탭 1', '탭 2', '탭 3']"></StyledTab>
+    </div>
+    <!-- <WelcomeItem>
       <template #icon>
         <DocumentationIcon />
       </template>
@@ -177,4 +163,5 @@ export default {
       help us by
       <a target="_blank" href="https://vuejs.org/sponsor/">becoming a sponsor</a>.
     </WelcomeItem> -->
+  </div>
 </template>
