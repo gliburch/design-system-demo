@@ -10,7 +10,7 @@ import StyledCheckbox from '@/components/integration-design-system/src/component
 import StyledRadio from '@/components/integration-design-system/src/components/styled-radio/StyledRadio.vue2.vue3.vue'
 import StyledButton from '@/components/integration-design-system/src/components/styled-button/StyledButton.vue2.vue3.vue'
 import StyledBadge from '@/components/integration-design-system/src/components/styled-badge/StyledBadge.vue2.vue3.vue'
-import StyledTab from '@/components/integration-design-system/src/components/styled-tab/StyledTab.vue2.vue'
+import StyledTab from '@/components/integration-design-system/src/components/styled-tab/StyledTab.vue2.vue3.vue'
 const checkbox = ref({
   foo: false,
   bar: true
